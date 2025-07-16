@@ -95,7 +95,7 @@
 /* team section*/
 .team-container {
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 30px;
 }
 .team-img {
@@ -124,13 +124,69 @@
   line-height: 26px; /* 162.5% */
   margin: 24px 0;
 }
+/* feature section */
+.feature-container {
+  justify-content: space-between;
+  gap: 100px;
+}
+.feature-content {
+  width: 586px;
+}
+.feature-title {
+  font-size: 3rem;
+  font-weight: 700;
+  border-left: 7px solid #ff900e;
+  padding-left: 24px;
+}
+.feature-description {
+  color: #727272;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+  margin: 24px 0;
+}
+.feature-item {
+  padding: 30px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+  margin-bottom: 24px;
+}
+.feature-item-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.feature-item > p {
+  color: #727272;
+  font-size: 1rem;
+  line-height: 26px; /* 162.5% */
+  margin-top: 12px;
+}
+.feature-badge {
+  border-radius: 8px;
+  background: #ff900e;
+  display: inline-block;
+  padding: 24px;
+  margin: -120px -77px;
+}
+.badge10 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.badge-exp {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
 /* responsive css */
 
 /* for mobile devices */
 @media (max-width: 576px) {
   .nav-container,
   .nav-links,
-  .team-container {
+  .team-container,
+  .feature-container {
     flex-direction: column;
   }
   .team-img {
@@ -154,16 +210,25 @@
     margin-top: 24px;
     text-align: center;
   }
+  .feature-content {
+    width: 100%;
+  }
+  .feature-badge {
+    padding: 24px;
+    text-align: center;
+    margin: -70px -50px 0 0;
+  }
 }
 /*for laptop and tablet */
 @media (min-width: 576px) and (max-width: 992px) {
   .nav-container,
   .nav-links,
-  .team-container {
+  .team-container,
+  .feature-container {
     flex-direction: column;
   }
   .team-img {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
   .container,
   .banner-content {
@@ -182,5 +247,13 @@
     width: 100%;
     margin-top: 24px;
     text-align: center;
+  }
+  .feature-content {
+    width: 100%;
+  }
+  .feature-badge {
+    padding: 24px;
+    text-align: center;
+    margin: -70px -50px 0 0;
   }
 }
